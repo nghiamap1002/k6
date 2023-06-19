@@ -1,0 +1,11 @@
+{
+  "name": "k6",
+  "version": "1.0.0",
+  "description": "",
+  "main": "test.js",
+  "scripts": {
+    "k6": "k6 run --out json=report.json  test.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
