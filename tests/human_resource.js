@@ -51,10 +51,14 @@ export const addNewStaffs = (data) => {
 }
 
 
+export const removeCustomer = (data) => {
+    const payload = { "PK": "staff#086c2d90-3968-48a0-b4b1-daa9ca47eb33", "SK": "staff#086c2d90-3968-48a0-b4b1-daa9ca47eb33" }
+    http.post(`${CUSTOMER_ENDPOINT.info}/remove`, JSON.stringify(payload), data)
+    sleep(1)
+}
+
 export const loginPasscode = (data) => {
-
     const payload = { "passcode": "R!CH", "page": "Checkout" }
-
     http.post(`${BASE_URL}/roles/login-passcode`, JSON.stringify(payload), data)
     sleep(1)
 }

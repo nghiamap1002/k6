@@ -1,12 +1,11 @@
 import http from 'k6/http';
 import { check, group, sleep } from 'k6';
 
-
 export const cashCheckout = (data) => {
 
     const payloadCashCheckout = {
         "ticketId": "WR-061623-0009",
-        "createdDate": 1687143978,
+        "createdDate": new Date().getTime(),
         "timezone": "Asia/Jakarta",
         "ticketInfo": {
             "customerName": "Unknown",

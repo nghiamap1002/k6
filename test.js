@@ -10,7 +10,10 @@ export {
   getStaffs,
   updateCustomer,
   addNewCustomer,
-  loginPasscode
+  loginPasscode,
+  getGiftCard,
+  getTempTicket,
+  getPayrollByStaff,
 } from './tests/index.js'
 
 export const options = {
@@ -75,11 +78,33 @@ export const options = {
     //   exec: 'cashCheckout',
     // },
 
-    loginPasscode: {
+    // loginPasscode: {
+    //   executor: 'constant-vus',
+    //   vus: 1,
+    //   duration: '10s',
+    //   exec: 'loginPasscode',
+    // },
+
+    // getGiftCard: {
+    //   executor: 'constant-vus',
+    //   vus: 1,
+    //   duration: '10s',
+    //   exec: 'getGiftCard',
+    // },
+
+    getTempTicket: {
       executor: 'constant-vus',
       vus: 1,
       duration: '10s',
-      exec: 'loginPasscode',
+      exec: 'getTempTicket',
+    },
+
+
+    getPayrollByStaff: {
+      executor: 'constant-vus',
+      vus: 1,
+      duration: '10s',
+      exec: 'getPayrollByStaff',
     },
 
   },
@@ -91,10 +116,13 @@ export const options = {
     // 'http_req_duration{scenario:getCustomers}': [],
     // 'http_req_duration{scenario:updateCustomers}': [],
     // 'http_req_duration{scenario:addNewCustomer}': [],
-    'http_req_duration{scenario:loginPasscode}': [],
+    // 'http_req_duration{scenario:loginPasscode}': [],
     // 'http_req_duration{scenario:getStaffs}': [],
     // 'http_req_duration{scenario:getServices}': [],
     // 'http_req_duration{scenario:cashCheckout}': [],
+    // 'http_req_duration{scenario:getGiftCard}': [],
+    'http_req_duration{scenario:getTempTicket}': [],
+    'http_req_duration{scenario:getPayrollByStaff}': [],
   },
 };
 
